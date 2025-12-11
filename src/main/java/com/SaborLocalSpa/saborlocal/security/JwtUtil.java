@@ -1,4 +1,3 @@
-// src/main/java/com/SaborLocalSpa/saborlocal/security/JwtUtil.java
 package com.SaborLocalSpa.saborlocal.security;
 
 import io.jsonwebtoken.Claims;

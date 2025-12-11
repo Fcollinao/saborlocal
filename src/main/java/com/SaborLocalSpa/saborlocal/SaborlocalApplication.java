@@ -22,16 +22,18 @@ public class SaborlocalApplication implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) {
-        if (clienteRepository.findByEmail("cliente@example.com").isEmpty()) {
-            Cliente c = new Cliente();
-            c.setNombre("Cliente Prueba");
-            c.setEmail("prueba@example.com");
-            c.setPassword(passwordEncoder.encode("654321"));
-            c.setRol("USER");
-            clienteRepository.save(c);
-            System.out.println("prueba creada: prueba@example.com / 654321");
+        public void run(String... args) {
+            String email = "prueba@example.com";
+
+            if (clienteRepository.findByEmail(email).isEmpty()) {
+                Cliente c = new Cliente();
+                c.setNombre("Cliente Prueba");
+                c.setEmail(email);
+                c.setPassword(passwordEncoder.encode("654321"));
+                c.setRol("USER");
+                clienteRepository.save(c);
+                System.out.println("prueba creada: " + email + " / 654321");
+            }
         }
-    }
 }
 
