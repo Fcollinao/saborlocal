@@ -1,0 +1,494 @@
+:root {
+  --sl-green: #2f6e47;
+  --sl-green-dark: #22543d;
+}
+
+/* ---------- Boilerplate CRA ---------- */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Estilos antiguos (si los usas) ---------- */
+
+.bg-cafe {
+  background: linear-gradient(90deg, #2f6e47 70%, #8cd2a7 100%);
+}
+
+.navbar-brand,
+.nav-link,
+.badge {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.badge-cafe {
+  background-color: #3b8b6a !important;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-cafe {
+  background-color: #010a05ce !important;
+  border-color: #0c1811 !important;
+  color: #ebebeb !important;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.btn-cafe:hover,
+.btn-cafe:focus {
+  background-color: #469172 !important;
+  border-color: #9cf1d1 !important;
+  color: #dedede !important;
+}
+
+.btn-verde-oscuro {
+  background-color: #206a2c;
+  color: white;
+  border: 1px solid #155320;
+}
+
+.btn-verde-oscuro:hover,
+.btn-verde-oscuro:active,
+.btn-verde-oscuro:focus {
+  background-color: #184b21;
+  color: white;
+  border: 1px solid #155320;
+}
+
+.carrito-box {
+  background-color: #206a2c;
+  color: white;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.card-hover {
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- NAVBAR SABORLOCAL ---------- */
+
+.navbar-saborlocal {
+  background-color: #f8f9fa;
+}
+
+.navbar-saborlocal .navbar-brand {
+  font-weight: 600;
+  color: #000 !important;
+}
+
+.navbar-saborlocal .nav-link {
+  color: #333 !important;
+  font-weight: 500;
+}
+
+.navbar-saborlocal .nav-link:hover {
+  color: #000 !important;
+}
+
+/* Logo tipo marca SaborLocal */
+
+.brand-saborlocal {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.brand-main {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #111;
+}
+
+.brand-accent {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #2f6e47;
+  margin-left: 0.15rem;
+}
+
+.brand-sub {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6c757d;
+}
+
+/* Iconos derecha navbar */
+
+.icon-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.icon-button:focus {
+  outline: none;
+}
+
+.icon-button:hover {
+  color: #111;
+}
+
+.position-relative {
+  position: relative;
+}
+
+/* Badge rojo carrito */
+
+.cart-badge {
+  position: absolute;
+  top: -0.35rem;
+  right: -0.45rem;
+  background-color: #e02424;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0 0.3rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+/* Texto alternativo para iconos */
+
+.simple-icon {
+  font-size: 1rem;
+  color: #333;
+}
+
+.simple-text {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* ---------- BANNERS LOGIN / OLVIDÓ / REGISTRO ---------- */
+
+.forgot-banner {
+  border-bottom: 1px solid #eee;
+  padding: 2.5rem 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.9)
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.forgot-banner-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.forgot-banner h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  color: #000000;
+}
+
+.forgot-banner p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+.forgot-banner p span {
+  font-weight: 600;
+  color: #176b3f;
+}
+
+/* ---------- Layout formularios auth ---------- */
+
+.login-wrapper {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #f8f9fa;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.login-panel {
+  width: 100%;
+  max-width: 720px;
+}
+
+/* ---------- Enlaces estilo SaborLocal ---------- */
+
+.link-saborlocal {
+  color: #111111;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link-saborlocal:hover {
+  color: #176b3f;
+  text-decoration: underline;
+}
+
+.link-saborlocal-soft {
+  color: #111111;
+  text-decoration: none;
+}
+
+.link-saborlocal-soft:hover {
+  color: #176b3f;
+  text-decoration: underline;
+}
+
+/* ---------- Hero de inicio ---------- */
+
+.home-hero {
+  position: relative;
+  min-height: 380px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: stretch;
+}
+
+.home-hero-overlay {
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.25)
+  );
+  padding: 3.5rem 0;
+}
+
+.home-hero-content {
+  max-width: 720px;
+  color: #ffffff;
+}
+
+.home-kicker {
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  color: #e5e7eb;
+}
+
+.home-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.home-subtitle {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  color: #e5e7eb;
+}
+
+.home-subtitle-strong {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #d2ffe2;
+}
+
+.home-strip {
+  background-color: #f8f9fa;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 1rem;
+  color: #103d26;
+  font-weight: 500;
+}
+
+/* ---------- Catálogo productos (verde uniforme) ---------- */
+
+.catalog-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.catalog-filters .btn-primary {
+  background-color: var(--sl-green);
+  border-color: var(--sl-green);
+}
+
+.catalog-filters .btn-primary:hover,
+.catalog-filters .btn-primary:focus {
+  background-color: var(--sl-green-dark);
+  border-color: var(--sl-green-dark);
+}
+
+.catalog-filters .btn-outline-secondary {
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.catalog-filters .btn-outline-secondary:hover {
+  color: var(--sl-green);
+  border-color: var(--sl-green);
+}
+
+.product-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.product-card-img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-card .btn-primary,
+.add-to-cart-btn {
+  background-color: var(--sl-green);
+  border-color: var(--sl-green);
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.product-card .btn-primary:hover,
+.add-to-cart-btn:hover,
+.add-to-cart-btn:focus {
+  background-color: var(--sl-green-dark);
+  border-color: var(--sl-green-dark);
+  color: #ffffff;
+}
+
+.product-card .badge {
+  background-color: rgba(47, 110, 71, 0.08);
+  color: var(--sl-green);
+}
+
+/* Botones de filtros */
+
+.filter-btn {
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  color: #374151;
+  font-weight: 500;
+  padding: 0.35rem 0.9rem;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  border-color: var(--sl-green);
+  color: var(--sl-green);
+  background-color: #f9fafb;
+}
+
+.filter-btn-active {
+  background-color: var(--sl-green);
+  border-color: var(--sl-green);
+  color: #ffffff;
+}
+
+.filter-btn-active:hover,
+.filter-btn-active:focus {
+  background-color: var(--sl-green-dark);
+  border-color: var(--sl-green-dark);
+  color: #ffffff;
+}
+
+.filter-badge {
+  border-radius: 999px;
+}
+
+/* ---------- Hero genérico (login / contacto) ---------- */
+
+.hero-section {
+  /* Si luego quieres imagen, ponla aquí con una ruta válida */
+  /* background-image: url('/assets/Imagen-centro.png'); */
+  background-color: #f9fafb;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+}
+
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.hero-breadcrumb {
+  margin-top: 0.5rem;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* Card de contacto / auth */
+
+.contact-card {
+  border-radius: 0.75rem;
+}
+
+/* Botón verde reutilizable */
+
+.btn-saborlocal {
+  background-color: var(--sl-green) !important;
+  border-color: var(--sl-green) !important;
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.btn-saborlocal:hover,
+.btn-saborlocal:focus {
+  background-color: var(--sl-green-dark) !important;
+  border-color: var(--sl-green-dark) !important;
+  color: #ffffff !important;
+}
+
+
